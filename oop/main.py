@@ -1,16 +1,21 @@
-from book_class import Book
+from library_system import Book, Ebook, PrintBook, Library
 
 def main():
-    my_book = Book("1984", "George Orwell", 1949)
-    print(my_book)
 
-    print(repr(my_book)) 
+    my_library = Library()
 
-    del my_book
+    classic_book = Book("Pride and Prejudice", "Jane Austen")
+    digital_novel = Ebook ("Snow Crash", "Neal Stephenson", 500)
+    paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
+
+    my_library.add_book(classic_book)
+    my_library.add_book(digital_novel)
+    my_library.add_book(paper_novel)
+
+    my_library.list_books()
 
 if __name__ == "__main__":
-    main()
-  
+    main()    
     
         
        
