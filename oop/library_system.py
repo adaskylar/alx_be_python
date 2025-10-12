@@ -13,7 +13,7 @@ class EBook(Book):
 
     def __str__(self):
 
-        return f"Ebook: {self.title} by {self.author}, file size: {self.file_size}KB"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
     
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -32,7 +32,7 @@ class Library:
        if isinstance (book, Book):
         self.books.append(book)
        else:
-        print("Only Book, Ebook, or PrintBook instances can be added.")
+        print("Only Book, EBook, or PrintBook instances can be added.")
 
     def list_books(self):
         if not self.books:
